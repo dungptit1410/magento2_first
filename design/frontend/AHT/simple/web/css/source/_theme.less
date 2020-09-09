@@ -1,0 +1,104 @@
+//  Color nesting
+@page__background-color: @color-gray20;
+@sidebar__background-color: @color-gray40;
+@primary__color: @color-gray80;
+@border-color__base: @color-gray76;
+
+@link__color: @color-gray56;
+@link__hover__color: @color-gray60;
+
+//  Buttons
+// @button__color: @color-gray20;
+// @button__background: @color-gray80;
+// @button__border: 1px solid @border-color__base;
+
+//  Primary button
+@button-primary__background: @color-orange-red1;
+@button-primary__border: 1px solid @color-orange-red2;
+@button-primary__color: @color-white;
+@button-primary__hover__background: darken(@color-orange-red1, 5%);
+@button-primary__hover__border: 1px solid @color-orange-red2;
+@button-primary__hover__color: @color-white;
+
+//  Navigation
+@navigation-level0-item__color: @color-gray80;
+@submenu-item__color: @color-gray80;
+
+@navigation__background: @color-gray40;
+@navigation-desktop-level0-item__color: @color-gray80;
+@navigation-desktop-level0-item__hover__color: @color-gray34;
+@navigation-desktop-level0-item__active__color: @navigation-desktop-level0-item__color;
+
+//  Tabs
+@tab-control__background-color: @page__background-color;
+
+//  Forms
+@form-element-input__background: @color-gray89;
+@form-element-input-placeholder__color: @color-gray60;
+
+//  Header icons
+@header-icons-color: @color-gray89;
+@header-icons-color-hover: @color-gray60;
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .header.panel .header.links {
+        .customer-welcome + .authorization-link {
+            display: none;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .customer-name,
+    .customer-welcome + .authorization-link {
+        display: none;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .customer-welcome {
+        .lib-dropdown(
+            @_toggle-selector: ~'.action.switch',
+            @_options-selector: ~'.customer-menu .header.links',
+            @_dropdown-actions-padding: 0,
+            @_icon-font-text-hide: true,
+            @_icon-font-size: 22px,
+            @_icon-font-line-height: 22px,
+            @_dropdown-list-min-width: 160px,
+            @_dropdown-list-item-hover: transparent,
+            @_dropdown-list-pointer-position: right,
+            @_dropdown-list-position-right: 0
+        );
+
+         li {
+            a {
+                .lib-link(
+                @_link-color: #333,
+                @_link-text-decoration: none,
+                @_link-color-visited: #333,
+                @_link-text-decoration-visited: none,
+                @_link-color-hover: #333,
+                @_link-text-decoration-hover: none,
+                @_link-color-active: #333,
+                @_link-text-decoration-active: none
+                );
+                display: block;
+                line-height: 1.4;
+                padding: 8px;
+            }
+        }
+    }
+}
+h1, .ui-menu-item{font-family:
+    'Pacifico', cursive;}

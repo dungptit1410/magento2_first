@@ -1,0 +1,28 @@
+<ul class="owl-carousel owl-theme my-list">
+    <div class="item"><li><img src="https://via.placeholder.com/1200X400"></li></div>
+    <div class="item"><li><img src="https://via.placeholder.com/1200X400"></li></div>
+    <div class="item"><li><img src="https://via.placeholder.com/1200X400"></li></div>
+    <div class="item"><li><img src="https://via.placeholder.com/1200X400"></li></div>
+</ul>
+
+
+<script>
+    require([
+        'jquery',
+        'owlCarousel'
+        ], function ($) {
+            $(document).ready(function() {
+                var owl = $('.my-list');
+                owl.owlCarousel({
+                    items: 1,
+                    loop: true,
+                    // autoplay: true,
+                    // autoplayTimeout: 1000,
+                    autoplayHoverPause: true,
+                    dots:false,
+                    nav: false
+
+                });
+            });
+        });
+</script>

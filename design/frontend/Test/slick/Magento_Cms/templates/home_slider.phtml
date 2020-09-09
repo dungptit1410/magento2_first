@@ -1,0 +1,27 @@
+<ul class="my-list">
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+    <li><img src="https://via.placeholder.com/300X400"></li>
+</ul>
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".my-list").slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1
+            });
+        });
+    });
+</script>
